@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace fileSplit
@@ -12,7 +14,7 @@ namespace fileSplit
         public string fileName = string.Empty;
         public string outputDir = string.Empty;
         public OpenFileDialog openFileDialog = new OpenFileDialog();
-        public int currentLine =0;
+        public int currentLine = 0;
         public int fileNum = 0;
 
         public Form1()
@@ -20,6 +22,16 @@ namespace fileSplit
             InitializeComponent();
         }
 
+        private static async void WriteCharacters(string input, string od, string fname, string fnum, string fext)
+        {
+            using (StreamWriter file =
+                        new StreamWriter(od + @"\" + fname + fnum + fext, true))
+            {
+                await file.WriteAsync(input);
+            }
+        }
+
+        [STAThread]
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = "c:\\";
@@ -33,16 +45,18 @@ namespace fileSplit
                 filePath = openFileDialog.FileName;
                 label1.Text = filePath;
                 fileName = openFileDialog.SafeFileName.Split('.')[0];
-                fileExtension = "."+ openFileDialog.SafeFileName.Split('.')[1];
+                fileExtension = "." + openFileDialog.SafeFileName.Split('.')[1];
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button2.Enabled = false;
             Application.DoEvents();
             progressBar.Value = 0;
             //Read the contents of the file into a stream
             var fileStream = openFileDialog.OpenFile();
+            StringBuilder buffer = new StringBuilder();
 
             using (StreamReader sr = new StreamReader(fileStream))
             {
@@ -51,28 +65,29 @@ namespace fileSplit
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (currentLine < Convert.ToInt32(textBox1.Text))
+                    if (currentLine > Convert.ToInt32(textBox1.Text))
                     {
-                        using (System.IO.StreamWriter file =
-                        new System.IO.StreamWriter(outputDir+@"\"+fileName+fileNum+fileExtension, true))
-                        {
-                            file.WriteLine(line);
-                        }
-                        currentLine++;
+                        buffer.AppendLine(line);
+                        currentLine = 0;
+                        WriteCharacters(buffer.ToString(), outputDir, fileName, fileNum.ToString(), fileExtension);
+                        fileNum++;
+                        buffer = new StringBuilder();
                     }
                     else
                     {
-                        using (System.IO.StreamWriter file =
-                        new System.IO.StreamWriter(outputDir + @"\" + fileName + fileNum + fileExtension, true))
-                        {
-                            file.WriteLine(line);
-                        }
-                        currentLine = 0;
-                        fileNum++;
+                        buffer.AppendLine(line);
+                        currentLine++;
                     }
                     progressBar.Value = Convert.ToInt32((double)baseStream.Position / length * 100);
                     Application.DoEvents();
                 }
+                fileStream.Dispose();
+                label1.Text = "Done, Select another file";
+                Thread.Sleep(200);
+                button2.Enabled = true;
+                progressBar.Value = 0;
+                currentLine = 0;
+                fileNum = 0;
             }
         }
 

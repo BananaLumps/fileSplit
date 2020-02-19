@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="fileSplit.exe" version="1.0.0.2" publicKeyToken="a1445d99fd4a7dfd" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="fileSplit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="fileSplit.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fileSplit.exe" size="13296">
+      <assemblyIdentity name="fileSplit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bf/50aDqIN5TnC8Rm9wKvr7gPLRYpjIO7ZHYX6yphXM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="fileSplit.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MICHAEL-DESKTOP\Michael" issuerKeyHash="2a74e0647db98ff49bd97ca7206924456c21af85" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>lrJeXqm3vY3BNAg+cfcw0XttjsVFLLsyjdwmsvlZCbM=</DigestValue></Reference></SignedInfo><SignatureValue>R0CxevyrDuixGsz3fXeovecEvyEM/0VsZmBYHctQ2NGhnCbsjhE+8r+JI/rMfjT1gXJELTSQvKAX6TH4ReUHK7xp+G3hk+9Jg8Eolf3QXKyIn0al1YUoTHSRqXksgdWfgfbZYl/qA7OEbcyQ5iMprIhHvTf5JRi41BioCjvk7JU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sEuvqWZriX3xl/t5v1gtp+5PMyjNvjU5cKz82LYTxWEbLmd3MTj2zOVTco4+OGBiPsyFLn9ieg+DarL3H9hwoAHPHPJLpIcAhiDeUT85bolXvyPblzZHygKKv0dJQata4q+VgyYvtkEvx1fA0e2PQlLerOVXUxNyFwNW9V1Vk2U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b30959f9b226dc8d32bb2c45c58e6d7bd130f7713e0834c18dbdb7a95e5eb296" Description="" Url=""><as:assemblyIdentity name="fileSplit.exe" version="1.0.0.2" publicKeyToken="a1445d99fd4a7dfd" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MICHAEL-DESKTOP\Michael</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>TvoAV3RHaFcz6MDwbe9UR63FhZ71bKtFe8UcsgYP240=</DigestValue></Reference></SignedInfo><SignatureValue>D+KeBnG2RwQ1/bghe/MAX0X0EfFDQw4c+Vg00pO5uRVDNb8PB0B12+NmNRGx4FV7hmnwU3Ys7h57ktiDZcooBcWS5/VX9EnYFN+uLBmm4iVp0A94jVuuDJQFKb2bUMHBxpVYSzWx+jzYLriHzKqDEf+jcxLAncECgRQAD6OUtwE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sEuvqWZriX3xl/t5v1gtp+5PMyjNvjU5cKz82LYTxWEbLmd3MTj2zOVTco4+OGBiPsyFLn9ieg+DarL3H9hwoAHPHPJLpIcAhiDeUT85bolXvyPblzZHygKKv0dJQata4q+VgyYvtkEvx1fA0e2PQlLerOVXUxNyFwNW9V1Vk2U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB9TCCAV6gAwIBAgIQR13c3B+b+L5ARfeurQShNDANBgkqhkiG9w0BAQsFADA5MTcwNQYDVQQDHi4ATQBJAEMASABBAEUATAAtAEQARQBTAEsAVABPAFAAXABNAGkAYwBoAGEAZQBsMB4XDTIwMDIxOTAxMTEzNVoXDTIxMDIxODA3MTEzNVowOTE3MDUGA1UEAx4uAE0ASQBDAEgAQQBFAEwALQBEAEUAUwBLAFQATwBQAFwATQBpAGMAaABhAGUAbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAsEuvqWZriX3xl/t5v1gtp+5PMyjNvjU5cKz82LYTxWEbLmd3MTj2zOVTco4+OGBiPsyFLn9ieg+DarL3H9hwoAHPHPJLpIcAhiDeUT85bolXvyPblzZHygKKv0dJQata4q+VgyYvtkEvx1fA0e2PQlLerOVXUxNyFwNW9V1Vk2UCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBuRmmc8XIGGb8Y9jY9MJ9i9w8nOdaxNDoD+yBYGTu+ubasAtxMuL++kRjjz0Crr4pvFqFP35OJfo17w6wCX+j9po1I1f2DmNAkdCY9CHE8RlmF/V2C0uAmy1fJP+3MWU76O70EI1TXk/dbPD/iplePmCVqokLB56caE/YLv3cb5g==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
