@@ -1,0 +1,13 @@
+C:\Users\Michael\source\repos\fileSplit\fileSplit\bin\Debug\fileSplit.exe.config
+C:\Users\Michael\source\repos\fileSplit\fileSplit\bin\Debug\fileSplit.exe
+C:\Users\Michael\source\repos\fileSplit\fileSplit\bin\Debug\fileSplit.pdb
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.csprojAssemblyReference.cache
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.Form1.resources
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.Properties.Resources.resources
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.csproj.GenerateResource.cache
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.exe
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.pdb
+C:\Users\Michael\source\repos\fileSplit\fileSplit\bin\Debug\fileSplit.exe.manifest
+C:\Users\Michael\source\repos\fileSplit\fileSplit\bin\Debug\fileSplit.application
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.exe.manifest
+C:\Users\Michael\source\repos\fileSplit\fileSplit\obj\Debug\fileSplit.application
